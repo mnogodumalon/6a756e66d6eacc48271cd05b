@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "pages": [
+    {
+      "slug": "anfrage",
+      "component": "PublicOrder",
+      "title": "Objednávkový formulář",
+      "endpoints": [
+        {
+          "entity": "kundenverwaltung",
+          "op": "create",
+          "fields": ["first_name", "last_name", "email", "phone", "street", "house_number", "postal_code", "city", "notes"],
+          "preset_fields": { "customer_status": "aktiv" },
+          "scope_description": "Zákazníci odesílají kontaktní údaje a přání k objednávce — záznamy jsou vytvářeny se statusem aktivní"
+        }
+      ]
+    }
+  ]
+}

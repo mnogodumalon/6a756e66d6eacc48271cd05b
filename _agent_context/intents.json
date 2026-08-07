@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "flows": [],
+  "unregistered_pages": [
+    {
+      "file": "src/pages/intents/BestellungAufnehmenPage.tsx",
+      "summary": "/**\n * Bestellung aufnehmen — 3-Schritt-Wizard.\n * Steps: 1) Kunde auswählen (aktiv) → 2) Bestelldetails eingeben → 3) Fahrer zuweisen & bestätigen.\n * Reads: kundenverwaltung (filter: customer_status='aktiv'), fahrerverwaltung (filter: driver_status='verfuegbar').\n * Writes: bestellverwaltung (createBestellverwaltungEntry).\n * Composes: IntentWizardShell, EntitySelectStep, StatusBadge.\n */",
+      "components": [
+        "Button",
+        "EntitySelectStep",
+        "Input",
+        "IntentWizardShell",
+        "Label",
+        "Select",
+        "SelectContent",
+        "SelectItem",
+        "SelectTrigger",
+        "SelectValue",
+        "StatusBadge",
+        "Textarea"
+      ],
+      "writes": [
+        "createBestellverwaltungEntry",
+        "createKundenverwaltungEntry"
+      ]
+    },
+    {
+      "file": "src/pages/intents/BestellungZuweisenPage.tsx",
+      "summary": "/**\n * Bestellung zuweisen — 3-Schritt-Wizard.\n * Steps: 1) Bestellung auswählen (filter: order_status neu|in_bearbeitung|bereit_zur_lieferung)\n *        → 2) Fahrer zuweisen (filter: driver_status verfuegbar)\n *        → 3) Status setzen & speichern (updateBestellverwaltungEntry mit fahrer + order_status + delivery_notes).\n * Reads: bestellverwaltung, fahrerverwaltung. Writes: bestellverwaltung (updateBestellverwaltungEntry).\n * Composes: IntentWizardShell, EntitySelectStep, StatusBadge.\n */",
+      "components": [
+        "Button",
+        "EntitySelectStep",
+        "IntentWizardShell",
+        "Select",
+        "SelectContent",
+        "SelectItem",
+        "SelectTrigger",
+        "SelectValue",
+        "StatusBadge",
+        "Textarea"
+      ],
+      "writes": [
+        "updateBestellverwaltungEntry"
+      ]
+    }
+  ]
+}
