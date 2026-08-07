@@ -1,0 +1,22 @@
+{
+  "entities": {
+    "Kundenverwaltung": {
+      "placeholders_set": 11,
+      "defaults_keys": ["customer_since", "customer_status"],
+      "computed_keys": [],
+      "reason": "Reine Stammdaten-Entity ohne Preisfelder, Mengen oder Lookup-Ketten. Keine berechenbaren Werte. customer_status als Enum mit Default 'aktiv', customer_since fällt auf Erfassungsdatum 'heute' zurück."
+    },
+    "Fahrerverwaltung": {
+      "placeholders_set": 10,
+      "defaults_keys": ["driver_status"],
+      "computed_keys": [],
+      "reason": "Stammdaten für Fahrer ohne numerische Berechnung. work_start/work_end sind Text-Felder (Zeitzeichen), keine date-Felder → kein dateDiff. driver_status mit Default 'verfuegbar' für neue Einträge. Kein applookup auf Preis-Entitäten."
+    },
+    "Bestellverwaltung": {
+      "placeholders_set": 13,
+      "defaults_keys": ["order_date", "order_status", "desired_delivery_time"],
+      "computed_keys": [],
+      "reason": "Order-Entity mit applookup (Kunde, Fahrer), Lookup-Status und Zahlungsart. total_amount ist manuelle Geschäftsentscheidung (Summe Artikel-Preise), nicht aus Form-Feldern berechenbar — ordered_items ist Textarea, keine Artikel-References. Datumspaar ist Geschäfts-Zeitstempel (wann bestellt, wann liefern), kein dateDiff für Dauer sinnvoll. Daher computed leer."
+    }
+  }
+}
