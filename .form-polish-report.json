@@ -1,0 +1,22 @@
+{
+  "entities": {
+    "Kundenverwaltung": {
+      "placeholders_set": 11,
+      "defaults_keys": ["customer_status", "customer_since"],
+      "computed_keys": [],
+      "reason": "Reine Stammdatenverwaltung ohne Berechnungen. Keine Number-Felder mit Abhängigkeiten, keine applookup-Ketten zu Preis-Targets. Datum customer_since zeigt nur die Beziehungsdauer an."
+    },
+    "Fahrerverwaltung": {
+      "placeholders_set": 9,
+      "defaults_keys": ["vehicle_type", "driver_status"],
+      "computed_keys": [],
+      "reason": "Stammdaten für Fahrer und Fahrzeugtypen. Keine Number-Felder, Zeit-Felder sind reine Text-Strings (keine date/time-Typen), keine applookup mit Preis-Targets. Status und Fahrzeugtyp mit sinnvollen Defaults vorbelegt."
+    },
+    "Bestellverwaltung": {
+      "placeholders_set": 13,
+      "defaults_keys": ["order_date", "desired_delivery_time", "order_status"],
+      "computed_keys": [],
+      "reason": "Bestellungsverwaltung mit zwei Datums-Paaren (order_date + desired_delivery_time, delivery_street + delivery_postal_code + delivery_city). total_amount ist ein manuell gepflegtes Number-Feld ohne applookup-Quellen für Artikel (Artikel werden als Text im Textarea eingegeben, nicht als Lookup-Liste). Keine automatische Preisaggregation sinnvoll. Status und Zahlungsmethode erhalten Defaults, fieldOrder logisch sortiert nach Wichtigkeit."
+    }
+  }
+}
