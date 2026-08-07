@@ -20,6 +20,7 @@
 import type { ComponentType } from 'react';
 
 // <custom:intent-imports>
+import { IconTruckDelivery, IconCircleCheck } from '@tabler/icons-react';
 // </custom:intent-imports>
 
 export interface IntentLink {
@@ -35,6 +36,8 @@ export interface IntentLink {
 
 export const INTENTS: IntentLink[] = [
   // <custom:intents>
+  { path: '/intents/lieferung-zuweisen', label: 'Lieferung zuweisen', icon: IconTruckDelivery, description: 'Fahrer zuweisen und Lieferung starten' },
+  { path: '/intents/lieferung-abschliessen', label: 'Lieferung abschließen', icon: IconCircleCheck, description: 'Lieferungen als zugestellt markieren' },
   // </custom:intents>
 ];
 
@@ -45,4 +48,4 @@ export const INTENTS: IntentLink[] = [
  * purpose — a scaffold update resets it to false (self-healing if Phase 2
  * never ran).
  */
-export const INTENTS_PENDING = true;
+export const INTENTS_PENDING = false;
