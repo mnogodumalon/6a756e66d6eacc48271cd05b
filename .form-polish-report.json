@@ -1,0 +1,22 @@
+{
+  "entities": {
+    "Kundenverwaltung": {
+      "placeholders_set": 11,
+      "defaults_keys": ["customer_since", "customer_status"],
+      "computed_keys": [],
+      "reason": "Reine Stammdaten-Entity ohne numerische oder zeitliche Berechnungen. Keine applookup-Verkettungen. Nur zwei sinnvolle Defaults: Kunde seit heute, Status aktiv (Regelfall)."
+    },
+    "Fahrerverwaltung": {
+      "placeholders_set": 9,
+      "defaults_keys": ["driver_status"],
+      "computed_keys": [],
+      "reason": "Fahrer-Profil-Entity ohne Berechnung. Statische Lookups (Fahrzeugtyp, Status) führen zu keinen Preis-/Kosten-Daten. Nur Status-Default: neue Fahrer sind verfügbar."
+    },
+    "Bestellverwaltung": {
+      "placeholders_set": 13,
+      "defaults_keys": ["order_date", "desired_delivery_time", "order_status"],
+      "computed_keys": [],
+      "reason": "Bestell-Entity ohne berechnete Gesamtkosten. Zwar zwei applookup-Felder (Fahrer, Kunde), aber keine mit numerischen target_fields (Preis/Kosten). Ordered_items ist freie Textarea (nicht strukturiert). Total_amount ist manueller Eintrag. Drei Defaults sinnvoll: order_date jetzt, desired_delivery_time morgen, order_status neu."
+    }
+  }
+}
