@@ -1,0 +1,22 @@
+{
+  "entities": {
+    "Kundenverwaltung": {
+      "placeholders_set": 11,
+      "defaults_keys": ["customer_since", "customer_status"],
+      "computed_keys": [],
+      "reason": "Reine Stammdaten-Entity (Name, Adresse, E-Mail, Status). Keine numerischen Felder, keine applookup-Ketten mit Preis-Targets, keine Datumspaare für Berechnungen. Kundenstatus erhält Default 'Aktiv'."
+    },
+    "Fahrerverwaltung": {
+      "placeholders_set": 9,
+      "defaults_keys": ["driver_status"],
+      "computed_keys": [],
+      "reason": "Stammdaten für Fahrer (Name, Telefon, E-Mail, Fahrzeugtyp, Liefergebiet, Status, Notizen). Keine Preise, keine Lookup-Targets mit Zahlenwerten, kein Datumspaar für Dauer. work_start/work_end sind Text-Felder, keine date-Felder. Verfügbarkeitsstatus erhält Default 'Verfügbar'."
+    },
+    "Bestellverwaltung": {
+      "placeholders_set": 13,
+      "defaults_keys": ["order_date", "order_status"],
+      "computed_keys": [],
+      "reason": "Bestellformular mit Kunde, Fahrer, Artikel, Gesamtbetrag, Lieferadresse, Status und Zahlungsart. total_amount wird manuell eingegeben (keine Posten-Felder für Berechnung). Applookups (fahrer, kunde) haben keine numerischen Targets. Keine Datumspaar-Dauer. order_date erhält Jetzt-Zeit, order_status erhält 'Neu'."
+    }
+  }
+}
