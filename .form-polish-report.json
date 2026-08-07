@@ -1,0 +1,22 @@
+{
+  "entities": {
+    "Kundenverwaltung": {
+      "placeholders_set": 11,
+      "defaults_keys": ["customer_since", "customer_status"],
+      "computed_keys": [],
+      "reason": "Reine Stammdaten-Entity. Keine Number-Felder außer IDs, keine applookup-Ketten, keine Berechnungsmöglichkeiten. Defaults: Kundendatum heute + Status aktiv (klare Initialzustände)."
+    },
+    "Fahrerverwaltung": {
+      "placeholders_set": 10,
+      "defaults_keys": ["vehicle_type", "driver_status"],
+      "computed_keys": [],
+      "reason": "Stammdaten + Verfügbarkeitsverwaltung. Keine Number-Felder, keine applookup-Preis-Ziele. Defaults: Fahrzeugtyp PKW (häufigster Fall) + Status verfügbar (Initialzustand). Arbeitszeiten sind String-Felder (keine dateDiff-Berechnung sinnvoll)."
+    },
+    "Bestellverwaltung": {
+      "placeholders_set": 13,
+      "defaults_keys": ["order_date", "desired_delivery_time", "order_status"],
+      "computed_keys": [],
+      "reason": "Bestellung mit Gesamtbetrag, aber Artikel nur als frei-Text-Textarea (keine strukturierten Posten, keine applookup-Artikel mit Preisen). total_amount wird manuell eingegeben, keine Basis für computed-Formeln. Defaults: Bestelldatum=heute, Lieferzeitpunkt=morgen (1 Tag später), Status=neu."
+    }
+  }
+}
