@@ -1,0 +1,22 @@
+{
+  "entities": {
+    "Kundenverwaltung": {
+      "placeholders_set": 10,
+      "defaults_keys": ["customer_status"],
+      "computed_keys": [],
+      "reason": "Reine Stammdaten (Namen, Adresse, Status, Datum). Kein Preisfeld, keine applookup mit numerischen Zielen, kein Datums-Paar mit Differenz-Sinn. Lookup-Default für customer_status sinnvoll (Aktiv), sonst User-Input erforderlich."
+    },
+    "Fahrerverwaltung": {
+      "placeholders_set": 9,
+      "defaults_keys": ["driver_status"],
+      "computed_keys": [],
+      "reason": "Reine Fahrerprofile (Namen, Telefon, Fahrzeugtyp, Verfügbarkeitsstatus, Arbeitszeiten als Text). Keine berechneten Felder, keine applookup-Ketten. Lookup-Default für driver_status (Verfügbar) sinvoll, Fahrzeugtyp bleibt User-Choice (zu vielfältig)."
+    },
+    "Bestellverwaltung": {
+      "placeholders_set": 13,
+      "defaults_keys": ["order_date", "order_status"],
+      "computed_keys": [],
+      "reason": "Bestellungen mit applookup auf Fahren und Kunden (keine numerischen Preis-Ziele in Targets), Lieferadresse, Lieferzeitpunkt, manuell eingegebener Gesamtbetrag. Keine Arithmetik-Potenziale (kein Einzelpreis × Menge), total_amount ist manuelle Eingabe, nicht berechenbar. Defaults: order_date='heute mit Uhrzeit' (erfassungsrelevant), order_status='Neu' (Status-Semantik)."
+    }
+  }
+}
