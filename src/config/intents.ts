@@ -20,6 +20,7 @@
 import type { ComponentType } from 'react';
 
 // <custom:intent-imports>
+import { IconShoppingCart, IconCircleCheck } from '@tabler/icons-react';
 // </custom:intent-imports>
 
 export interface IntentLink {
@@ -39,6 +40,8 @@ export interface IntentLink {
 
 export const INTENTS: IntentLink[] = [
   // <custom:intents>
+  { path: '/intents/bestellung-aufgeben', label: { de: 'Bestellung aufgeben', en: 'Place order', cs: 'Zadat objednávku' }, icon: IconShoppingCart, description: 'Neue Lieferbestellung in 3 Schritten anlegen' },
+  { path: '/intents/bestellung-abschliessen', label: { de: 'Bestellung abschließen', en: 'Close order', cs: 'Uzavřít objednávku' }, icon: IconCircleCheck, description: 'Aktive Bestellung als geliefert markieren und Fahrer freistellen' },
   // </custom:intents>
 ];
 
@@ -49,4 +52,4 @@ export const INTENTS: IntentLink[] = [
  * purpose — a scaffold update resets it to false (self-healing if Phase 2
  * never ran).
  */
-export const INTENTS_PENDING = true;
+export const INTENTS_PENDING = false;
