@@ -20,6 +20,7 @@
 import type { ComponentType } from 'react';
 
 // <custom:intent-imports>
+import { IconShoppingCartPlus, IconTruckDelivery } from '@tabler/icons-react';
 // </custom:intent-imports>
 
 export interface IntentLink {
@@ -39,6 +40,8 @@ export interface IntentLink {
 
 export const INTENTS: IntentLink[] = [
   // <custom:intents>
+  { path: '/intents/bestellung-aufnehmen', label: { de: 'Bestellung aufnehmen', en: 'New order', cs: 'Nová objednávka' }, icon: IconShoppingCartPlus, description: 'Neue Bestellung in 3 Schritten aufnehmen' },
+  { path: '/intents/bestellung-zuweisen', label: { de: 'Fahrer zuweisen', en: 'Assign driver', cs: 'Přiřadit řidiče' }, icon: IconTruckDelivery, description: 'Bestellung einem verfügbaren Fahrer zuweisen' },
   // </custom:intents>
 ];
 
@@ -49,4 +52,4 @@ export const INTENTS: IntentLink[] = [
  * purpose — a scaffold update resets it to false (self-healing if Phase 2
  * never ran).
  */
-export const INTENTS_PENDING = true;
+export const INTENTS_PENDING = false;
