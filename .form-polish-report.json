@@ -1,0 +1,22 @@
+{
+  "entities": {
+    "Kundenverwaltung": {
+      "placeholders_set": 11,
+      "defaults_keys": ["customer_since", "customer_status"],
+      "computed_keys": [],
+      "reason": "Reine Stammdaten-Entity (Namen, Kontakt, Adresse, Status). Keine Number-Felder und keine Preis-Applookups — nichts berechenbar. Status und Kundendatum erhalten Defaults, aber keine Formeln."
+    },
+    "Fahrerverwaltung": {
+      "placeholders_set": 9,
+      "defaults_keys": ["driver_status"],
+      "computed_keys": [],
+      "reason": "Fahrer-Stammdaten mit Fahrzeugtyp und Verfügbarkeitsstatus. Keine Number-Felder, keine Zeitberechnung (work_start/work_end sind Text, keine Datenfelder), keine Applookups auf Preise. Nur Status-Default sinnvoll."
+    },
+    "Bestellverwaltung": {
+      "placeholders_set": 13,
+      "defaults_keys": ["order_date", "order_status"],
+      "computed_keys": [],
+      "reason": "Transaktionale Bestellverwaltung mit Kunde-/Fahrer-Applookups (keine Preis-Ziele), Status-/Zahlungs-Lookups und ein Number-Feld total_amount. Das Feld wird manuell eingegeben (kein Multilookup für Artikel-Strukturen, nur Textarea). Keine Berechnungsformeln, da Einzelposten nicht als strukturierter Multilookup vorliegen."
+    }
+  }
+}
