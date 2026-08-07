@@ -1,0 +1,22 @@
+{
+  "entities": {
+    "Kundenverwaltung": {
+      "placeholders_set": 11,
+      "defaults_keys": ["customer_since", "customer_status"],
+      "computed_keys": [],
+      "reason": "Reine Stammdatenverwaltung (Kontakte), keine Berechnungen — kein Datumspaar, keine Mengenfelder, keine Preis-Targets in applookup. Defaults nur für Erfassungsdatum (heute) und Kundenstatus (Aktiv als Startstatus)."
+    },
+    "Fahrerverwaltung": {
+      "placeholders_set": 9,
+      "defaults_keys": ["driver_status"],
+      "computed_keys": [],
+      "reason": "Mitarbeiterstammdaten, keine Berechnungen — work_start/work_end sind String-Felder (keine dateRange-Formel möglich), kein applookup mit Preis-Target. Default nur für Verfügbarkeitsstatus (Verfügbar als Startstatus)."
+    },
+    "Bestellverwaltung": {
+      "placeholders_set": 12,
+      "defaults_keys": ["order_date", "order_status"],
+      "computed_keys": [],
+      "reason": "Order-Verwaltung mit Kunde und Fahrer, aber ohne itemized Posten — total_amount ist manueller Input (keine Quelle für Berechnung vorhanden: kein Menge×Preis-Paar, kein applookup-Preis-Target). Defaults für order_date (heute mit Uhrzeit) und Status (Neu als Startwert)."
+    }
+  }
+}

@@ -1,0 +1,80 @@
+const STATUS_COLOR_MAP: Record<string, string> = {
+  // Event status
+  in_planung: 'bg-blue-100 text-blue-700 border-blue-200',
+  einladungen_versendet: 'bg-purple-100 text-purple-700 border-purple-200',
+  bestaetigt: 'bg-green-100 text-green-700 border-green-200',
+  abgeschlossen: 'bg-slate-100 text-slate-600 border-slate-200',
+  abgesagt: 'bg-red-100 text-red-700 border-red-200',
+  // RSVP status
+  ausstehend: 'bg-gray-100 text-gray-600 border-gray-200',
+  zugesagt: 'bg-green-100 text-green-700 border-green-200',
+  vielleicht: 'bg-amber-100 text-amber-700 border-amber-200',
+  // Booking status
+  angefragt: 'bg-blue-100 text-blue-700 border-blue-200',
+  angebot_erhalten: 'bg-yellow-100 text-yellow-700 border-yellow-200',
+  gebucht: 'bg-emerald-100 text-emerald-700 border-emerald-200',
+  storniert: 'bg-red-100 text-red-700 border-red-200',
+  // Payment status
+  offen: 'bg-amber-100 text-amber-700 border-amber-200',
+  anzahlung: 'bg-yellow-100 text-yellow-700 border-yellow-200',
+  bezahlt: 'bg-green-100 text-green-700 border-green-200',
+  // Generic
+  aktiv: 'bg-green-100 text-green-700 border-green-200',
+  inaktiv: 'bg-gray-100 text-gray-600 border-gray-200',
+  pausiert: 'bg-yellow-100 text-yellow-700 border-yellow-200',
+  bestanden: 'bg-green-100 text-green-700 border-green-200',
+  nicht_bestanden: 'bg-red-100 text-red-700 border-red-200',
+  gut: 'bg-green-100 text-green-700 border-green-200',
+  befriedigend: 'bg-yellow-100 text-yellow-700 border-yellow-200',
+  beschaedigt: 'bg-orange-100 text-orange-700 border-orange-200',
+  defekt: 'bg-red-100 text-red-700 border-red-200',
+  sehr_gut: 'bg-emerald-100 text-emerald-700 border-emerald-200',
+  verfuegbar: 'bg-green-100 text-green-700 border-green-200',
+  in_wartung: 'bg-amber-100 text-amber-700 border-amber-200',
+  ausgemustert: 'bg-gray-100 text-gray-600 border-gray-200',
+  neu: 'bg-blue-100 text-blue-700 border-blue-200',
+  in_bearbeitung: 'bg-blue-100 text-blue-700 border-blue-200',
+  erledigt: 'bg-green-100 text-green-700 border-green-200',
+  fertig: 'bg-green-100 text-green-700 border-green-200',
+  // Keys from this app's lookup fields (generated; colors by heuristic)
+  bar: 'bg-blue-100 text-blue-700 border-blue-200',
+  bereit_zur_lieferung: 'bg-purple-100 text-purple-700 border-purple-200',
+  e_bike: 'bg-cyan-100 text-cyan-700 border-cyan-200',
+  ec_karte: 'bg-indigo-100 text-indigo-700 border-indigo-200',
+  fahrrad: 'bg-teal-100 text-teal-700 border-teal-200',
+  geliefert: 'bg-pink-100 text-pink-700 border-pink-200',
+  gesperrt: 'bg-red-100 text-red-700 border-red-200',
+  im_einsatz: 'bg-sky-100 text-sky-700 border-sky-200',
+  kreditkarte: 'bg-violet-100 text-violet-700 border-violet-200',
+  motorroller: 'bg-blue-100 text-blue-700 border-blue-200',
+  nicht_verfuegbar: 'bg-red-100 text-red-700 border-red-200',
+  paypal: 'bg-purple-100 text-purple-700 border-purple-200',
+  pkw: 'bg-cyan-100 text-cyan-700 border-cyan-200',
+  transporter: 'bg-indigo-100 text-indigo-700 border-indigo-200',
+  ueberweisung: 'bg-teal-100 text-teal-700 border-teal-200',
+  unterwegs: 'bg-pink-100 text-pink-700 border-pink-200',
+};
+
+const DEFAULT_COLOR = 'bg-gray-100 text-gray-600 border-gray-200';
+
+interface StatusBadgeProps {
+  statusKey: string | undefined;
+  label?: string;
+  className?: string;
+}
+
+export function StatusBadge({ statusKey, label, className = '' }: StatusBadgeProps) {
+  if (!statusKey) return null;
+  const color = STATUS_COLOR_MAP[statusKey] ?? DEFAULT_COLOR;
+  return (
+    <span className={`inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium border ${color} ${className}`}>
+      {label ?? statusKey}
+    </span>
+  );
+}
+
+/** Get the color classes for a status key (useful for custom rendering) */
+export function getStatusColor(statusKey: string | undefined): string {
+  if (!statusKey) return DEFAULT_COLOR;
+  return STATUS_COLOR_MAP[statusKey] ?? DEFAULT_COLOR;
+}
