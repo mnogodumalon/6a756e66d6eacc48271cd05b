@@ -1,0 +1,22 @@
+{
+  "entities": {
+    "Kundenverwaltung": {
+      "placeholders_set": 10,
+      "defaults_keys": ["customer_since", "customer_status"],
+      "computed_keys": [],
+      "reason": "Reine Stammdaten (Namen, Kontakt, Adresse, Status). Keine Preisfelder, keine applookup-Multiplikationen, keine Datums-Paare — nichts berechenbar."
+    },
+    "Fahrerverwaltung": {
+      "placeholders_set": 9,
+      "defaults_keys": ["driver_status"],
+      "computed_keys": [],
+      "reason": "Reine Stammdaten (Namen, Fahrzeugtyp, Liefergebiet, Verfügbarkeitsstatus, Arbeitszeiten). Keine Preisfelder, keine Multiplikationen, die work_start/work_end-Felder sind plain Text, keine echten Datums-Paare — nichts berechenbar."
+    },
+    "Bestellverwaltung": {
+      "placeholders_set": 12,
+      "defaults_keys": ["order_date", "order_status"],
+      "computed_keys": [],
+      "reason": "Bestellform mit Kunde-, Fahrer-Applookups, Lieferadresse, Bestelldatum, Status, Zahlungsmethode, Gesamtbetrag (manuell). Das total_amount-Feld hat keine Artikel-Multilookup-Quelle im Formularkontext — die Bestellpositionen sind nicht als fields[] vorhanden, sondern als Textarea eingegeben. Gesamtbetrag ist daher ein manueller Input, nicht berechenbar."
+    }
+  }
+}
