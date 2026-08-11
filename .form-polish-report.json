@@ -1,0 +1,22 @@
+{
+  "entities": {
+    "Kundenverwaltung": {
+      "placeholders_set": 11,
+      "defaults_keys": ["customer_status"],
+      "computed_keys": [],
+      "reason": "Reine Stammdaten (Adresse, Kontakt), keine Zahlen und keine berechenbaren Größen"
+    },
+    "Fahrerverwaltung": {
+      "placeholders_set": 10,
+      "defaults_keys": ["driver_status"],
+      "computed_keys": [],
+      "reason": "Fahrer-Stammdaten, keine Zahlen und keine zeitlichen Berechnungen (Arbeitsbeginn/Ende sind Strings)"
+    },
+    "Bestellverwaltung": {
+      "placeholders_set": 13,
+      "defaults_keys": ["order_date", "order_status"],
+      "computed_keys": [],
+      "reason": "Lieferauftrag ohne strukturierte Artikel-Details; total_amount ist manuell oder extern vorgegeben; ordered_items ist unstrukturierte Textarea (keine multiplelookup auf Preis-Stammdaten)"
+    }
+  }
+}
