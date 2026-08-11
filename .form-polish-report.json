@@ -1,0 +1,22 @@
+{
+  "entities": {
+    "Kundenverwaltung": {
+      "placeholders_set": 10,
+      "defaults_keys": ["customer_since", "customer_status"],
+      "computed_keys": [],
+      "reason": "Reine Stammdatenverwaltung mit Adressfeldern. Keine Number-Felder, keine Applookup-Preis-Chains, keine berechenbaren Beziehungen. Customer_since erhält Default 'today' (Erfassungsdatum), customer_status erhält Default 'aktiv' (übliche Vorbelegung)."
+    },
+    "Fahrerverwaltung": {
+      "placeholders_set": 10,
+      "defaults_keys": ["driver_status"],
+      "computed_keys": [],
+      "reason": "Fahrerstammdaten mit Fahrzeugtyp- und Verfügbarkeitsstatus-Lookups. Arbeitsbeginn/-ende sind Textfelder (keine time-Felder), daher keine Berechnung. Driver_status erhält Default 'verfuegbar' (häufigste Vorbelegung). Keine berechenbaren Beziehungen."
+    },
+    "Bestellverwaltung": {
+      "placeholders_set": 13,
+      "defaults_keys": ["order_date", "order_status", "desired_delivery_time", "payment_method"],
+      "computed_keys": [],
+      "reason": "Bestellformular mit Applookups (Kunde required, Fahrer optional), aber KEIN Applookup mit Preis-Target. Total_amount ist manuell eingegeben (kein Lookup-Preis auf Artikel/Leistung). Order_date erhält Default 'today' mit Uhrzeit (Erfassungszeitpunkt), desired_delivery_time erhält '+1 Tag' (typische Lieferplanung), order_status 'neu', payment_method 'bar' (häufigste Variante). Keine dateDiff-Formeln möglich — desired_delivery_time ist Lieferplanung, nicht Dauer-Berechnung."
+    }
+  }
+}
