@@ -1,0 +1,22 @@
+{
+  "entities": {
+    "Kundenverwaltung": {
+      "placeholders_set": 11,
+      "defaults_keys": ["customer_since", "customer_status"],
+      "computed_keys": [],
+      "reason": "Reine Stammdaten (Kontaktinformationen, Adresse), keine berechenbaren Größen. Kundenstatus hat klare Default (aktiv), Datum 'Kunde seit' erhält Vorbelegt auf heute."
+    },
+    "Fahrerverwaltung": {
+      "placeholders_set": 9,
+      "defaults_keys": ["vehicle_type", "driver_status"],
+      "computed_keys": [],
+      "reason": "Fahrerstammdaten mit Fahrzeugtyp und Verfügbarkeitsstatus. Keine Preise, keine applookups auf Kostenfelder, keine Datumspaare für Differenzen. Arbeitsbeginn/Arbeitsende sind freie Text-Felder ohne Struktur. Defaults für Fahrzeugtyp (Fahrrad) und Status (Verfügbar) gesetzt."
+    },
+    "Bestellverwaltung": {
+      "placeholders_set": 13,
+      "defaults_keys": ["order_date", "order_status", "payment_method"],
+      "computed_keys": [],
+      "reason": "Bestellverwaltung mit Kunde und Fahrer (applookups), Bestelldatum, Artikel (freier Text), Gesamtbetrag (Number, aber manueller Input). Gesamtbetrag ist KEIN berechenbares Feld, weil (a) die Artikel nur als Textarea-Text vorliegen (nicht strukturiert), (b) es kein Menge-Feld im Formular für Multiplikation gibt, (c) es keine applookup auf eine Artikel-Tabelle mit Preis-Target gibt. Defaults: order_date=heute (withTime:true), order_status=Neu, payment_method=Barzahlung bei Lieferung. Zwei datetime-Felder bilden KEIN Datumspaar für Differenzen (Bestellzeitpunkt vs. Lieferwunsch unterschiedlich semantisch)."
+    }
+  }
+}
