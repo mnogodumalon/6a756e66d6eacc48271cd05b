@@ -1,0 +1,22 @@
+{
+  "entities": {
+    "Kundenverwaltung": {
+      "placeholders_set": 11,
+      "defaults_keys": ["customer_status", "customer_since"],
+      "computed_keys": [],
+      "reason": "Reine Stammdaten-Entity (Kontakt + Adresse). Kein Number-Feld vorhanden, keine applookup-Kette mit Preis-Target, keine Date-Paare für Dauer-Berechnung. Defaults: Status auf 'Aktiv' und Erfassungsdatum auf heute sinnvoll — alles weitere reine Eingabefelder."
+    },
+    "Fahrerverwaltung": {
+      "placeholders_set": 9,
+      "defaults_keys": ["driver_status"],
+      "computed_keys": [],
+      "reason": "Fahrer-Stammdaten mit Status-Lookup und Text-Zeitfelder (work_start/work_end sind Texte, keine date-Felder → kein dateDiff). Keine Number-Felder, keine Preis/Satz-applookups. Default: Status auf 'Verfügbar'. Keine computed-Formeln möglich."
+    },
+    "Bestellverwaltung": {
+      "placeholders_set": 13,
+      "defaults_keys": ["order_date", "desired_delivery_time", "order_status"],
+      "computed_keys": [],
+      "reason": "Order-Entity mit applookup-Felder (fahrer, kunde) und datetimeminute-Felder. Das total_amount-Feld ist Freitext-Artikel ('ordered_items' ist Textarea, keine Multilookup), daher keine realistische automatische Preis-Berechnung möglich. Defaults: order_date=heute, desired_delivery_time=morgen, order_status='Neu'. Keine computed-Formel — ein Backend-Artikel-Subformular oder ein Multilookup würde eine Iteration ermöglichen, aber die existieren nicht."
+    }
+  }
+}

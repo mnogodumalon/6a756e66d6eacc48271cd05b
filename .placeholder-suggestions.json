@@ -1,0 +1,42 @@
+{
+  "KundenverwaltungDialog.tsx": {
+    "first_name": "z. B. Hans",
+    "last_name": "z. B. Müller",
+    "email": "z. B. hans@example.de",
+    "phone": "z. B. 030 123456789",
+    "street": "z. B. Hauptstraße",
+    "house_number": "z. B. 42",
+    "postal_code": "z. B. 10115",
+    "city": "z. B. Berlin",
+    "customer_since": "Wann wurde der Kunde registriert?",
+    "customer_status": "Status des Kunden wählen",
+    "notes": "Besonderheiten, Vorlieben, Anmerkungen..."
+  },
+  "FahrerverwaltungDialog.tsx": {
+    "driver_first_name": "z. B. Anna",
+    "driver_last_name": "z. B. Schmidt",
+    "driver_phone": "z. B. 0160 123456789",
+    "driver_email": "z. B. anna@freshroute.de",
+    "vehicle_type": "Fahrzeugtyp wählen",
+    "delivery_zone": "z. B. Bezirk Mitte",
+    "driver_status": "Verfügbarkeitsstatus wählen",
+    "work_start": "z. B. 09:00 Uhr",
+    "work_end": "z. B. 17:00 Uhr",
+    "driver_notes": "Besonderheiten, Lizenzen, Einsatzbereich..."
+  },
+  "BestellverwaltungDialog.tsx": {
+    "fahrer": "Lieferfahrer aus der Liste wählen",
+    "kunde": "Welcher Kunde bestellt?",
+    "order_date": "Wann wurde die Bestellung aufgegeben?",
+    "ordered_items": "Artikel, Menge, Größe, Varianten...",
+    "total_amount": "z. B. 45,99",
+    "order_status": "Aktuellen Bestellstatus wählen",
+    "payment_method": "Zahlungsart wählen",
+    "desired_delivery_time": "Wann soll geliefert werden?",
+    "delivery_street": "z. B. Friedrichstraße",
+    "delivery_house_number": "z. B. 18",
+    "delivery_postal_code": "z. B. 10117",
+    "delivery_city": "z. B. Berlin",
+    "delivery_notes": "Zusätzliche Lieferanweisungen, Hinweise..."
+  }
+}
