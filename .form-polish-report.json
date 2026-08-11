@@ -1,0 +1,22 @@
+{
+  "entities": {
+    "Kundenverwaltung": {
+      "placeholders_set": 11,
+      "defaults_keys": ["customer_since", "customer_status"],
+      "computed_keys": [],
+      "reason": "Reine Stammdaten (Name, Kontakt, Adresse), keine numerischen Felder oder applookup-Preis-Ketten vorhanden"
+    },
+    "Fahrerverwaltung": {
+      "placeholders_set": 9,
+      "defaults_keys": ["driver_status"],
+      "computed_keys": [],
+      "reason": "Stammdaten für Fahrerprofile, keine Preise, keine Zeitberechnung (work_start/work_end sind Strings, keine Datumsdifferenzen möglich)"
+    },
+    "Bestellverwaltung": {
+      "placeholders_set": 12,
+      "defaults_keys": ["order_date", "order_status"],
+      "computed_keys": [],
+      "reason": "Bestellverwaltung mit Lieferlogistik; total_amount ist manueller Input (keine Quellfelder zum Multiplizieren), applookups (fahrer, kunde) haben keine numerischen Zielfelder"
+    }
+  }
+}
