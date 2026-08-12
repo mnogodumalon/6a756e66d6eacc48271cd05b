@@ -1,0 +1,22 @@
+{
+  "entities": {
+    "Kundenverwaltung": {
+      "placeholders_set": 11,
+      "defaults_keys": ["customer_since", "customer_status"],
+      "computed_keys": [],
+      "reason": "Reine Stammdaten (Name, Adresse, Kontakt), keine Preisfelder, keine Applookups zu Kostendaten — nichts berechenbar"
+    },
+    "Fahrerverwaltung": {
+      "placeholders_set": 9,
+      "defaults_keys": ["driver_status"],
+      "computed_keys": [],
+      "reason": "Fahrerinformation ohne Preisbeziehung — Status hat klares Default (Verfügbar), keine berechenbaren Felder"
+    },
+    "Bestellverwaltung": {
+      "placeholders_set": 13,
+      "defaults_keys": ["order_date", "desired_delivery_time", "order_status"],
+      "computed_keys": [],
+      "reason": "Bestellung mit total_amount (manueller Input, nicht ableitbar aus Artikel-Preis-Lookup), ordered_items ist Textarea ohne strukturierte Daten — Gesamtbetrag wird vom User eingegeben"
+    }
+  }
+}
