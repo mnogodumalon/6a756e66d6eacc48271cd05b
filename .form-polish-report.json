@@ -1,0 +1,22 @@
+{
+  "entities": {
+    "Kundenverwaltung": {
+      "placeholders_set": 10,
+      "defaults_keys": ["customer_since", "customer_status"],
+      "computed_keys": [],
+      "reason": "Reine Stammdaten-Entity mit Kontaktinformationen und Adresse. Keine numerischen oder berechenbaren Felder. Kein applookup mit Preis-Target."
+    },
+    "Fahrerverwaltung": {
+      "placeholders_set": 9,
+      "defaults_keys": ["driver_status"],
+      "computed_keys": [],
+      "reason": "Fahrer-Stammdaten mit Fahrzeugtyp und Verfügbarkeitsstatus. Arbeitszeiten sind String/Text (keine date-Felder). Keine numerischen Felder, keine applookup-Kettungen, keine Berechnung möglich."
+    },
+    "Bestellverwaltung": {
+      "placeholders_set": 13,
+      "defaults_keys": ["order_date", "order_status"],
+      "computed_keys": [],
+      "reason": "Order-Management mit Kundenverweis und Fahrerzuweisung (applookups ohne Preis-Target), manuelle total_amount-Eingabe. Georderte Artikel nur als Textarea-Text, keine strukturierte Multilookup. Keine applookup-Ziele mit numerischen Preis-Feldern → keine automatische Preisberechnung möglich."
+    }
+  }
+}

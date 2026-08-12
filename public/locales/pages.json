@@ -1,0 +1,33 @@
+{
+  "pages": {
+    "en": {
+      " Bestellung": " Order",
+      " Bestellungen": " Orders",
+      "Aktive Fahrer": "Active Drivers",
+      "Bereit": "Ready",
+      "Bestellung": "Order",
+      "Fahrer": "Driver",
+      "Fahrer anlegen": "Add Driver",
+      "Fahrer-Status": "Driver Status",
+      "Geliefert": "Delivered",
+      "Heute bestellt": "Ordered Today",
+      "In Bearbeitung": "In Progress",
+      "In Bearbeitung nehmen": "Start Processing",
+      "Keine Lieferungen unterwegs — alle Bestellungen warten oder wurden geliefert.": "No deliveries in transit — all orders are pending or have been delivered.",
+      "Lieferübersicht": "Delivery Overview",
+      "Neue Bestellung": "New Order",
+      "Noch keine Fahrer erfasst. Füge deinen ersten Fahrer hinzu.": "No drivers added yet. Add your first driver.",
+      "Umsatz heute": "Revenue Today",
+      "Unbekannt": "Unknown",
+      "Unbekannter Kunde": "Unknown Customer",
+      "Unterwegs": "In Transit",
+      "Unterwegs — in Echtzeit": "In Transit — Real Time",
+      "wartet auf Bearbeitung": "pending processing",
+      "{0} Aktuell {1} Lieferung{2} unterwegs{3}.": "{0} Currently {1} delivery{2} in transit{3}.",
+      "{0} Keine offenen Lieferungen — alles erledigt.": "{0} No open deliveries — all done.",
+      "{0} {1} neue{2} warten auf Bearbeitung.": "{0} {1} new{2} pending processing.",
+      "— {0} neue Bestellungen warten": "— {0} new orders pending"
+    }
+  },
+  "v": 1
+}
