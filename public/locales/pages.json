@@ -1,0 +1,35 @@
+{
+  "pages": {
+    "en": {
+      "Alle Bestellungen erledigt — Glückwunsch!": "All orders completed — Congratulations!",
+      "Als geliefert markieren": "Mark as Delivered",
+      "Auf den Weg schicken": "Send on the Way",
+      "Bereit zur Lieferung": "Ready for Delivery",
+      "Bestellungen": "Orders",
+      "Fahrer hinzufügen": "Add Driver",
+      "Fahrer im Einsatz": "Drivers on Duty",
+      "Fahrer verfügbar": "Drivers Available",
+      "Fahrer zuweisen": "Assign Driver",
+      "Heute geplant": "Scheduled Today",
+      "In Bearbeitung nehmen": "Take In Progress",
+      "Lieferungen für heute geplant": "Deliveries scheduled for today",
+      "Neue Bestellung": "New Order",
+      "Noch keine Bestellungen heute — bereit für den Start!": "No orders yet today — ready to go!",
+      "Noch keine Fahrer angelegt": "No drivers created yet",
+      "Offen & in Bearbeitung": "Open & In Progress",
+      "Umsatz heute": "Revenue Today",
+      "Unbekannt": "Unknown",
+      "Unbekannter Kunde": "Unknown Customer",
+      "Weiter": "Next",
+      "bitte Fahrer zuweisen.": "please assign a driver.",
+      "haben noch keinen Fahrer": "have no driver assigned yet",
+      "hat noch keinen Fahrer": "has no driver assigned yet",
+      "unterwegs": "en route",
+      "werden gerade beliefert": "are currently being delivered",
+      "wird gerade beliefert": "is currently being delivered",
+      "{0} — Status aktualisiert": "{0} — Status Updated",
+      "{0} — Status geändert": "{0} — Status Changed"
+    }
+  },
+  "v": 1
+}
