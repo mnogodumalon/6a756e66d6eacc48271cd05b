@@ -1,0 +1,29 @@
+Legend: `!` after a field name = required (from the app's base view) —
+a step form that writes such a field must not submit it empty.
+A lookup field lists its keys after the type (`[lookup/select: a|b|c]`);
+these are the ONLY valid write values — quote them into the brief verbatim,
+the matching labels come from LOOKUP_OPTIONS at runtime.
+`⚙` lists the service methods for that entity, spelled exactly.
+
+Modules — copy these paths verbatim into a subagent brief:
+  @/types/app                            entity types, APP_IDS, LOOKUP_OPTIONS
+  @/types/enriched                       EnrichedBestellverwaltung — the COMPLETE list, no other Enriched* type exists
+  @/services/livingAppsService           LivingAppsService, createRecordUrl, extractRecordId
+  @/hooks/useDashboardData               useDashboardData
+  @/lib/formatters                       lookupKey, formatDate
+  @/components/blocks/IntentWizardShell  IntentWizardShell
+  @/components/blocks/EntitySelectStep   EntitySelectStep
+  @/components/blocks/StatusBadge        StatusBadge, getStatusColor
+  @/components/blocks/BudgetTracker      BudgetTracker
+There is NO `@/config/appIds`, no `@/config/lookupOptions` and no
+`@/lib/urlUtils` — APP_IDS and LOOKUP_OPTIONS come from `@/types/app`,
+createRecordUrl from the service. Note the lowercase `l` in the service path.
+
+- Kundenverwaltung (kundenverwaltung): first_name![string/text], last_name![string/text], email[string/email], phone[string/tel], street![string/text], house_number![string/text], postal_code![string/text], city![string/text], customer_since[date/date], customer_status[lookup/select: aktiv|inaktiv|gesperrt], notes[string/textarea]
+  ⚙ getKundenverwaltung() · getKundenverwaltungEntry(id) · createKundenverwaltungEntry(fields) · updateKundenverwaltungEntry(id, fields) · deleteKundenverwaltungEntry(id)
+- Fahrerverwaltung (fahrerverwaltung): driver_first_name![string/text], driver_last_name![string/text], driver_phone![string/tel], driver_email[string/email], vehicle_type![lookup/select: fahrrad|e_bike|motorroller|pkw|transporter], delivery_zone![string/text], driver_status![lookup/select: verfuegbar|im_einsatz|nicht_verfuegbar|inaktiv], work_start[string/text], work_end[string/text], driver_notes[string/textarea]
+  ⚙ getFahrerverwaltung() · getFahrerverwaltungEntry(id) · createFahrerverwaltungEntry(fields) · updateFahrerverwaltungEntry(id, fields) · deleteFahrerverwaltungEntry(id)
+- Bestellverwaltung (bestellverwaltung): fahrer[applookup/select], delivery_notes[string/textarea], order_date![date/datetimeminute], ordered_items![string/textarea], total_amount![number], order_status![lookup/select: neu|in_bearbeitung|bereit_zur_lieferung|unterwegs|geliefert|storniert], payment_method[lookup/select: bar|ec_karte|paypal|ueberweisung|kreditkarte], desired_delivery_time[date/datetimeminute], delivery_street[string/text], delivery_house_number[string/text], delivery_postal_code[string/text], kunde![applookup/select], delivery_city[string/text], delivery_location[geo]
+  ⚙ getBestellverwaltung() · getBestellverwaltungEntry(id) · createBestellverwaltungEntry(fields) · updateBestellverwaltungEntry(id, fields) · deleteBestellverwaltungEntry(id)
+  → fahrer links to app_id 6a756e4e20b6941460b32623
+  → kunde links to app_id 6a756e49599907d7a527484c

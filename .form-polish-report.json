@@ -1,0 +1,22 @@
+{
+  "entities": {
+    "Kundenverwaltung": {
+      "placeholders_set": 11,
+      "defaults_keys": ["customer_since", "customer_status"],
+      "computed_keys": [],
+      "reason": "Reine Stammdaten ohne numerische Berechnung — keine Preise, Mengen oder Lookup-Multiplikationen vorhanden"
+    },
+    "Fahrerverwaltung": {
+      "placeholders_set": 10,
+      "defaults_keys": ["driver_status"],
+      "computed_keys": [],
+      "reason": "Reine Admin-Verwaltung von Fahrern — keine Preise, Kosten oder berechneten Felder"
+    },
+    "Bestellverwaltung": {
+      "placeholders_set": 14,
+      "defaults_keys": ["order_date", "order_status", "desired_delivery_time"],
+      "computed_keys": [],
+      "reason": "total_amount ist manuell eingegeben (ordered_items als Freitext-Textarea, nicht strukturiert) — keine Automatisierung sinnvoll"
+    }
+  }
+}
