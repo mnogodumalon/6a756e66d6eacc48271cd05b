@@ -1,0 +1,22 @@
+{
+  "entities": {
+    "Kundenverwaltung": {
+      "placeholders_set": 11,
+      "defaults_keys": ["customer_since", "customer_status"],
+      "computed_keys": [],
+      "reason": "Reine Stammdaten (Name, Adresse, Kontakt). Keine Number-Felder, keine applookup-Preisfelder, keine Datumspaar für Aufenthalte. Nichts berechenbar."
+    },
+    "Fahrerverwaltung": {
+      "placeholders_set": 9,
+      "defaults_keys": ["driver_status"],
+      "computed_keys": [],
+      "reason": "Fahrer-Verwaltung mit Fahrzeugtyp und Liefergebiet. Keine Number-Felder, keine applookup-Preisfelder, keine berechenbaren Größen."
+    },
+    "Bestellverwaltung": {
+      "placeholders_set": 12,
+      "defaults_keys": ["order_date", "order_status", "payment_method"],
+      "computed_keys": [],
+      "reason": "Order-Entity mit applookup auf Fahrer/Kunde (nur Referenzen, keine Preis-Targets), Lieferadresse-Felder (Strings), total_amount ist Eingabe-Feld (User trägt Betrag manuell ein). Keine Berechnung aus Applookup-Preisen und Mengen; daher keine computed-Formeln erforderlich."
+    }
+  }
+}

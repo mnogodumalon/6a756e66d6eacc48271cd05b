@@ -1,0 +1,26 @@
+{
+  "pages": {
+    "en": {
+      "Alle heutigen Lieferungen sind erledigt": "All today's deliveries are completed",
+      "Als im Einsatz markieren": "Mark as On Duty",
+      "Als verfügbar markieren": "Mark as Available",
+      "Bestellung": "Order",
+      "Fahrer verfügbar": "Driver Available",
+      "Fahrer zuweisen": "Assign Driver",
+      "Heute": "Today",
+      "Heute & dringend": "Today & Urgent",
+      "Heute liefern wir an {0}.": "Today we are delivering to {0}.",
+      "Heute stehen keine Lieferungen an.": "No deliveries scheduled for today.",
+      "Neue Bestellung": "New Order",
+      "Umsatz heute": "Revenue Today",
+      "Unbekannter Kunde": "Unknown Customer",
+      "Unterwegs": "En Route",
+      "bitte Fahrer zuweisen": "please assign driver",
+      "ist verfügbar": "is available",
+      "sind verfügbar": "are available",
+      "unterwegs ohne Fahrer": "en route without driver",
+      "{0} Bestellungen betroffen": "{0} orders affected"
+    }
+  },
+  "v": 1
+}
