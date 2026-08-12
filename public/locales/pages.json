@@ -1,0 +1,32 @@
+{
+  "pages": {
+    "en": {
+      "Abmelden": "Sign Out",
+      "Alle Bestellungen erledigt — {0} Fahrer verfügbar": "All orders completed — {0} driver(s) available",
+      "Bereit": "Ready",
+      "Fahrer anlegen": "Create Driver",
+      "Fahrer frei": "Driver Available",
+      "Fahrer im Überblick": "Driver Overview",
+      "Geliefert": "Delivered",
+      "Heute fällig": "Due Today",
+      "Heute fällig & unterwegs": "Due Today & En Route",
+      "Karte": "Map",
+      "Keine Fahrer angelegt": "No drivers created",
+      "Keine Lieferungen heute — alles erledigt": "No deliveries today — all done",
+      "Keine heutigen Lieferungen — neue Bestellungen warten": "No deliveries today — new orders pending",
+      "Lieferung": "Delivery",
+      "Neu": "New",
+      "Neu / In Bearbeitung": "New / In Progress",
+      "Neue Bestellung": "New Order",
+      "Status weiterschalten": "Advance Status",
+      "Unbekannter Kunde": "Unknown Customer",
+      "Unterwegs": "En Route",
+      "Weiterschalten": "Advance",
+      "{0} neue Bestellungen — {1} Fahrer verfügbar": "{0} new orders — {1} driver(s) available",
+      "{0} unterwegs — {1} Fahrer verfügbar": "{0} en route — {1} driver(s) available",
+      "{0} — verfügbar gesetzt": "{0} — set to available",
+      "überfällig — Lieferzeit überschritten": "overdue — delivery time exceeded"
+    }
+  },
+  "v": 1
+}

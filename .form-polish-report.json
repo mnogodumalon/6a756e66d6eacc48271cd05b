@@ -1,0 +1,22 @@
+{
+  "entities": {
+    "Kundenverwaltung": {
+      "placeholders_set": 11,
+      "defaults_keys": ["customer_since", "customer_status"],
+      "computed_keys": [],
+      "reason": "Reine Stammdaten-Entity (CRM-Kontakte) — keine Number-Felder, keine Multiplika­tionen, keine berechenbaren Kostenbeträge. Lookup-Felder und Datum haben Defaults, sonst keine Berechnungslogik."
+    },
+    "Fahrerverwaltung": {
+      "placeholders_set": 9,
+      "defaults_keys": ["driver_status"],
+      "computed_keys": [],
+      "reason": "Fahrer-Stammdaten ohne numerische oder temporale Berechnungen. Arbeitszeiten sind Text-Strings (kein Datetime), daher keine dateDiff. Ein Status-Lookup mit Default, sonst direkte Felderfassung."
+    },
+    "Bestellverwaltung": {
+      "placeholders_set": 13,
+      "defaults_keys": ["order_date", "order_status", "desired_delivery_time", "payment_method"],
+      "computed_keys": [],
+      "reason": "Bestellverwaltung mit Kunde + Fahrer (applookups, aber keine Preis-Targets), Adresse, Datum und ein manuelles total_amount-Feld. Keine Berechnung der Liefergebühren oder automatischer Preisvergeben möglich, da keine Artikel-Mengen/Preislisten in der Form. Der Total ist manuelle Eingabe oder Backend-bestimmt, nicht formulär-berechenbar."
+    }
+  }
+}
