@@ -1,0 +1,26 @@
+{
+  "pages": {
+    "en": {
+      "Aktiv": "Active",
+      "Bestellung": "Order",
+      "Bestellung anlegen": "Create Order",
+      "Fahrer": "Driver",
+      "Fahrer verfügbar": "Driver Available",
+      "Fahrer zuweisen": "Assign Driver",
+      "Fahrer-Status": "Driver Status",
+      "Heute fällig": "Due Today",
+      "Im Einsatz": "On Duty",
+      "Keine Fahrer erfasst": "No Drivers Registered",
+      "Keine Lieferungen für heute geplant": "No Deliveries Scheduled for Today",
+      "Keine aktiven Bestellungen": "No Active Orders",
+      "Neue Bestellung": "New Order",
+      "Unbekannter Kunde": "Unknown Customer",
+      "Unterwegs": "En Route",
+      "Weiterschalten": "Advance",
+      "bereit zur Lieferung — noch kein Fahrer zugewiesen.": "Ready for Delivery — No Driver Assigned Yet.",
+      "{0} aktive Bestellungen": "{0} Active Orders",
+      "{0} — unterwegs": "{0} — En Route"
+    }
+  },
+  "v": 1
+}

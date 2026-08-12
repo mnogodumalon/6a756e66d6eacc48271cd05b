@@ -1,0 +1,22 @@
+{
+  "entities": {
+    "Kundenverwaltung": {
+      "placeholders_set": 11,
+      "defaults_keys": ["customer_since", "customer_status"],
+      "computed_keys": [],
+      "reason": "Reine Stammdaten-Entity ohne Geschäftslogik — keine Number-Felder, keine Applookup-Ketten mit numerischen Zielen, keine berechenbaren Größen."
+    },
+    "Fahrerverwaltung": {
+      "placeholders_set": 10,
+      "defaults_keys": ["driver_status", "vehicle_type"],
+      "computed_keys": [],
+      "reason": "Reine Fahrer-Stammdaten mit Lookups (Status, Fahrzeugtyp) und Text-Zeitfelder (work_start/work_end sind keine echten Datumsfelder, daher nicht als dateDiff berechenbar). Keine Geschäftslogik."
+    },
+    "Bestellverwaltung": {
+      "placeholders_set": 13,
+      "defaults_keys": ["order_date", "order_status"],
+      "computed_keys": [],
+      "reason": "Bestellverwaltung mit Adresse, Zeitstempel und Betrag — aber total_amount hat keine Quellenfelder (kein Menge × Preis, keine Applookup-Produkte). Datumsfelder sind nicht als Paar (order_date ist Erfassung, desired_delivery_time ist Kundenwunsch, nicht Dauer). Kein computed möglich."
+    }
+  }
+}
