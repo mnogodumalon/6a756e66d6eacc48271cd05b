@@ -1,0 +1,22 @@
+{
+  "entities": {
+    "Kundenverwaltung": {
+      "placeholders_set": 11,
+      "defaults_keys": ["customer_since", "customer_status"],
+      "computed_keys": [],
+      "reason": "Reine Stammdaten-Entity (CRM-Kontakte). Keine Number-Felder mit berechenbarer Beziehung, keine applookup-Preis-Chains. Defaults: Kundenseit auf heute, Status auf 'aktiv'."
+    },
+    "Fahrerverwaltung": {
+      "placeholders_set": 9,
+      "defaults_keys": ["driver_status"],
+      "computed_keys": [],
+      "reason": "Fahrer-Verwaltung mit Status-Lookup. Keine Number-Felder, keine Preise, keine berechenbaren Konstellationen. Default: Status auf 'verfügbar'."
+    },
+    "Bestellverwaltung": {
+      "placeholders_set": 13,
+      "defaults_keys": ["order_date", "order_status", "desired_delivery_time"],
+      "computed_keys": [],
+      "reason": "Bestellverwaltung mit order_date (datetimeminute), Status-Lookup und Lieferzeitpunkt-Offset. Das Feld total_amount ist Manualeingang (Artikel als Textarea ohne strukturierte Preisliste, keine target_numeric_fields in applookup-Targets), daher nicht berechenbar. Defaults: Bestelldatum heute, Status auf 'neu', Lieferzeitpunkt auf morgen."
+    }
+  }
+}

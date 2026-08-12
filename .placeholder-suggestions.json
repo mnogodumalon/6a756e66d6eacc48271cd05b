@@ -1,0 +1,42 @@
+{
+  "KundenverwaltungDialog.tsx": {
+    "first_name": "z. B. Max",
+    "last_name": "z. B. Mustermann",
+    "email": "max.mustermann@example.com",
+    "phone": "z. B. 030 / 12345678",
+    "street": "z. B. Hauptstraße",
+    "house_number": "z. B. 42",
+    "postal_code": "z. B. 10115",
+    "city": "z. B. Berlin",
+    "customer_since": "Wann ist der Kunde registriert?",
+    "customer_status": "Wähle einen Status",
+    "notes": "Besonderheiten, Vorlieben, Kontaktnotizen..."
+  },
+  "FahrerverwaltungDialog.tsx": {
+    "driver_first_name": "z. B. Anna",
+    "driver_last_name": "z. B. Schmidt",
+    "driver_phone": "z. B. 0170 / 3456789",
+    "driver_email": "anna.schmidt@example.com",
+    "vehicle_type": "Wähle einen Fahrzeugtyp",
+    "delivery_zone": "z. B. Charlottenburg",
+    "driver_status": "Wähle einen Status",
+    "work_start": "z. B. 08:00",
+    "work_end": "z. B. 18:00",
+    "driver_notes": "Besonderheiten, Einschränkungen..."
+  },
+  "BestellverwaltungDialog.tsx": {
+    "fahrer": "Welcher Fahrer?",
+    "delivery_notes": "Klingeln, Eingang, Besonderheiten...",
+    "order_date": "Wann wurde bestellt?",
+    "ordered_items": "Was wurde bestellt? (z. B. 2× Pasta Carbonara, 1× Caesar Salad)",
+    "total_amount": "z. B. 25,50",
+    "order_status": "Wähle einen Status",
+    "payment_method": "Wie wird bezahlt?",
+    "desired_delivery_time": "Wann soll geliefert werden?",
+    "delivery_street": "z. B. Friedrichstraße",
+    "delivery_house_number": "z. B. 101",
+    "delivery_postal_code": "z. B. 10117",
+    "kunde": "Welcher Kunde?",
+    "delivery_city": "z. B. Berlin"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "pages": [
+    {
+      "slug": "anfrage",
+      "type": "custom",
+      "entity": "kundenverwaltung",
+      "title": "Objednávkový formulář",
+      "published": true,
+      "fields": [
+        "first_name",
+        "last_name",
+        "email",
+        "phone",
+        "street",
+        "house_number",
+        "postal_code",
+        "city",
+        "notes"
+      ]
+    }
+  ]
+}
