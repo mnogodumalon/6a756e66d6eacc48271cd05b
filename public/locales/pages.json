@@ -1,0 +1,30 @@
+{
+  "pages": {
+    "en": {
+      "Aktuell unterwegs: {0}": "Currently En Route: {0}",
+      "Alles läuft rund — keine offenen Bestellungen.": "All clear — no open orders.",
+      "Als verfügbar markieren": "Mark as Available",
+      "Bestellung": "Order",
+      "Fahrer": "Driver",
+      "Fahrer anlegen": "Add Driver",
+      "Fahrer im Einsatz": "Drivers On Duty",
+      "Geliefert": "Delivered",
+      "Heute geliefert": "Delivered Today",
+      "Im Einsatz": "On Duty",
+      "Im Einsatz markieren": "Mark as On Duty",
+      "Keine Lieferungen unterwegs — alles geliefert!": "No deliveries en route — everything delivered!",
+      "Neu": "New",
+      "Neue Bestellung": "New Order",
+      "Noch keine Fahrer angelegt.": "No drivers created yet.",
+      "Unbekannter Kunde": "Unknown Customer",
+      "Unterwegs": "En Route",
+      "Verfügbar": "Available",
+      "Weiterschalten": "Forward",
+      "warten auf Weiterleitung.": "are awaiting forwarding.",
+      "wartet auf Weiterleitung.": "is awaiting forwarding.",
+      "{0} neue Bestellungen warten auf Bearbeitung.": "{0} new orders are awaiting processing.",
+      "{0} — Status geändert": "{0} — Status Changed"
+    }
+  },
+  "v": 1
+}

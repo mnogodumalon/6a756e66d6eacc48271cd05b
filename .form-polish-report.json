@@ -1,0 +1,22 @@
+{
+  "entities": {
+    "Kundenverwaltung": {
+      "placeholders_set": 11,
+      "defaults_keys": ["customer_since", "customer_status"],
+      "computed_keys": [],
+      "reason": "Reine Stammdatenverwaltung. Keine numerischen Felder (keine Preise, Mengen, Beträge). Keine applookup-Abhängigkeiten. Einzelnes Datum ohne Dauer-Kontext. Keine Berechnung sinnvoll."
+    },
+    "Fahrerverwaltung": {
+      "placeholders_set": 10,
+      "defaults_keys": ["driver_status", "vehicle_type"],
+      "computed_keys": [],
+      "reason": "Reine Stammdatenverwaltung für Fahrerprofile. Keine numerischen Preis- oder Kosten-Felder. work_start und work_end sind freie Textfelder, keine Daten-Objekte. Keine Berechnung möglich."
+    },
+    "Bestellverwaltung": {
+      "placeholders_set": 13,
+      "defaults_keys": ["order_date", "order_status", "desired_delivery_time"],
+      "computed_keys": ["_lieferzeit_stunden"],
+      "reason": "Auftrags-/Bestellentität mit zwei Datumspaarungen (order_date/desired_delivery_time). Berechnung der Vorlaufzeit als virtuelle computed für Dialog-Übersicht. Numerisches total_amount bleibt manuell (kein Posten-Schema vorhanden, nur Freitext ordered_items). Zwei applookup-Felder (kunde, fahrer) haben keine Preis-Targets im Schema."
+    }
+  }
+}
